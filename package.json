@@ -1,0 +1,32 @@
+{
+  "name": "nameste-react",
+  "version": "1.0.0",
+  "description": "This is Namaste React by Izabella Marton",
+  "keywords": [],
+  "homepage": "https://github.com/martoniza/nameste-react#readme",
+  "bugs": {
+    "url": "https://github.com/martoniza/nameste-react/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/martoniza/nameste-react.git"
+  },
+  "license": "ISC",
+  "author": "Izabella Marton",
+  "type": "commonjs",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "parcel": "^2.16.1"
+  },
+  "dependencies": {
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  },
+  "browserslist":[
+    "last 2 versions"
+  ]
+    
+  
+}

@@ -1,23 +1,11 @@
-/**
- * <div id="parent">
- *      <div id="child">
- *          <h1>I'm an h1 tag</h1>
- *          <h2>I'm anh2 tag</h2>
- *      </div>
- *      <div id="child2">
- *          <h1>I'm an h1 tag</h1>
- *          <h2>I'm an h2 tag</h2>
- *      </div>
- * </div>
- * 
- * ReactElement(Object) => HTML(Browser understands)
- *      
- */
-const heading1 = React.createElement("h1", {}, "I'm an h1 tag");
-const heading2 = React.createElement("h2", {}, "I'm an h2 tag");
-const child = React.createElement("div", { id: "child" }, [heading1, heading2]);
-const child2 = React.createElement("div", { id: "child2" }, [heading1, heading2]);
-const parent = React.createElement("div", { id: "parent" }, [child, child2]);
+import React from "react";
+import ReactDOM from "react-dom/client"
 
-const root = ReactDOM.createRoot(document.getElementById("header"));
+const heading1 = React.createElement("h1", {key: "5",}, "I'm an h1 tag");
+const heading2 = React.createElement("h2", {key: "4",}, "I'm an h2 tag");
+const child = React.createElement("div", { key: "3", id: "child" }, [heading1, heading2]);
+const child2 = React.createElement("div", { key: "2", id: "child2" }, [heading1, heading2]);
+const parent = React.createElement("div", { key: "1", id: "parent" }, [child, child2]);
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(parent); 
