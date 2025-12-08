@@ -1,36 +1,53 @@
-const resObject = {
-  id: "1234",
-  imgUrl:
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR75oqEsVn2OYLvdjAOnHbdhZcc_j3F9YSUcg&s",
-  name: "KFC",
-  cuisines: ["Burgers", "American", "Snacks", "Fast Food"],
-  costForTwo: 40000,
-  avRating: 3.9,
-  deliveryTime: 36,
-};
-
-const resObject2 = {
-  id: "2345",
-  imgUrl:
-    "https://img.freepik.com/photos-gratuite/vue-du-haut-table-pleine-nourriture_23-2149209253.jpg?semt=ais_hybrid&w=740&q=80",
-  name: "Hungry Squirel",
-  cuisines: ["Nuts", "Vegetables", "Snacks"],
-  costForTwo: 30000,
-  avRating: 4.5,
-  deliveryTime: 40,
-};
-
-const resObject3 = {
-  id: "3456",
-  imgUrl:
-    "https://www.fryingpanadventures.com/wp-content/uploads/2020/10/image-137-scaled-e1604152201367.jpeg",
-  name: "Sanghai",
-  cuisines: ["Chinese", "Asian", "Noodles"],
-  costForTwo: 50000,
-  avRating: 4.8,
-  deliveryTime: 40,
-};
-
-const resArray = [resObject, resObject2, resObject3];
+const resArray = [
+  {
+    info: {
+      id: "16866",
+      name: "Pizza Hut",
+      cloudinaryImageId:
+        "RX_THUMBNAIL/IMAGES/VENDOR/2025/9/1/24ea3d93-6246-4c69-a078-7a8fa133a7d3_16866.JPG",
+      costForTwo: "₹350 for two",
+      cuisines: ["Pizzas"],
+      avgRating: 4.3,
+      sla: {
+        deliveryTime: 26,
+      },
+    },
+  },
+  {
+    info: {
+      id: "603438",
+      name: "Chinese Wok",
+      cloudinaryImageId: "e0839ff574213e6f35b3899ebf1fc597",
+      costForTwo: "₹250 for two",
+      cuisines: ["Chinese", "Asian", "Tibetan", "Desserts"],
+      avgRating: 4.2,
+      sla: {
+        deliveryTime: 30,
+      },
+    },
+  },
+  {
+    info: {
+      id: "785298",
+      name: "Olio - The Wood Fired Pizzeria",
+      cloudinaryImageId:
+        "RX_THUMBNAIL/IMAGES/VENDOR/2025/11/24/33c8215e-97f7-46b9-b4c8-d975d5eeba1d_785298.JPG",
+      costForTwo: "₹300 for two",
+      cuisines: [
+        "Pizzas",
+        "Pastas",
+        "Italian",
+        "Fast Food",
+        "Snacks",
+        "Beverages",
+        "Desserts",
+      ],
+      avgRating: 4.3,
+      sla: {
+        deliveryTime: 30,
+      },
+    },
+  },
+];
 
 export default resArray;
