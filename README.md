@@ -57,3 +57,8 @@ They are normal JS utility functions.
 
 - useState()
 - useEffect()
+
+# 2 types of Routing in web apps
+
+- Client Side Routing
+- Server Side Routing
