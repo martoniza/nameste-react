@@ -75,6 +75,11 @@
   display: flex;
 }
 
-.puppy-div {
-  display: flex;
+.user-card {
+  padding: 10px;
+  border: 1px solid black;
+}
+
+.avatar-img {
+  width: 200px;
 }

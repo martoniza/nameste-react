@@ -3,9 +3,10 @@ import Shimmer from "./Shimmer";
 import { useParams } from "react-router";
 
 const RestaurantMenu = () => {
-  const [restInfo, setrestaurantInfo] = useState(null);
-
   const { resId } = useParams(); // it should be used in the URL used for fetching
+
+  // THIS CODE FROM HERE
+  const [restInfo, setrestaurantInfo] = useState(null);
 
   useEffect(() => {
     fetchMenu();
@@ -26,6 +27,7 @@ const RestaurantMenu = () => {
         ?.restaurants[2]?.info
     );
   };
+  // UNTIL HERE can be replaced by a custom hook: useRestaurantMenu.js => const restInfo = useRestaurantMenu(resId);
 
   if (restInfo === null) return <Shimmer />;
 

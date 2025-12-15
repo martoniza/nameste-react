@@ -3,6 +3,7 @@ import Shimmer from "./Shimmer";
 
 import { useState } from "react";
 import { useEffect } from "react";
+import useOnlineStatus from "../utils/useOnlineStatus";
 
 const Body = () => {
   const [listOfRestaurants, setListOfRestaurants] = useState([]);
@@ -28,6 +29,13 @@ const Body = () => {
     );
   };
 
+  const onlineStatus = useOnlineStatus();
+
+  if (onlineStatus === false)
+    return (
+      <h1>It seems you are offline. Please, check your internet connection.</h1>
+    );
+
   return listOfRestaurants.length === 0 ? (
     <Shimmer />
   ) : (
@@ -45,12 +53,8 @@ const Body = () => {
           <button
             className="search-btn"
             onClick={() => {
-              const filteredRestaurants = listOfRestaurants.filter(
-                //(rest) => rest.info.name === searchText
-                (rest) =>
-                  rest.info.name
-                    .toLowerCase()
-                    .includes(searchText.toLowerCase())
+              const filteredRestaurants = listOfRestaurants.filter((rest) =>
+                rest.info.name.toLowerCase().includes(searchText.toLowerCase())
               );
               setFilteredRestaurants(filteredRestaurants);
             }}
